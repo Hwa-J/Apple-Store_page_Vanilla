@@ -96,70 +96,6 @@ a {
   display: none;
 }
 
-/* -- COMMON BOX STYLE -- */
-
-.box-title-style {
-  padding: 20px 0;
-  font-size: 26px;
-  font-weight: 800;
-  color: #6e6e73;
-}
-.box-shape {
-  border-radius: 20px;
-  overflow: hidden;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  transition: 0.3s;
-  position: relative;
-}
-.box-shape:hover {
-  transform: scale(1.01);
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.14);
-}
-.box-scale-1,
-.box-scale-1 .full-img {
-  width: 313px;
-  height: 500px;
-}
-.box-scale-2,
-.box-scale-2 .full-img {
-  width: 400px;
-  height: 500px;
-}
-.box-scale-3,
-.box-scale-3 .full-img {
-  width: 480px;
-  height: 500px;
-}
-.box-scale-1,
-.box-scale-2,
-.box-scale-3 {
-  position: relative;
-}
-.box-scale-1 .full-img,
-.box-scale-2 .full-img,
-.box-scale-3 .full-img {
-  position: absolute;
-}
-
-/* -- TEXT BOX -- */
-
-.text-box {
-  position: absolute;
-  padding: 30px;
-}
-.text-box__title {
-  font-size: 12px;
-}
-.text-box__content {
-  font-size: 28px;
-  font-weight: 600;
-  padding: 8px 0;
-  word-break: keep-all;
-}
-.text-box__content-sub {
-  font-size: 16px;
-}
-
 /* ---- HEADER ---- */
 
 header {
@@ -231,14 +167,14 @@ header .header__main-menu li a:hover {
   }
 }
 @keyframes color-change {
-    0% {
-      background-color: #0071e3;
-      color: #fff;
-    }
-    100%{
-      background-color: #fff;
-      color: #1d1d1f;
-    }
+  0% {
+    background-color: #0071e3;
+    color: #fff;
+  }
+  100%{
+    background-color: #fff;
+    color: #1d1d1f;
+  }
 }
 
 /* ---- MAIN ---- */
@@ -324,8 +260,67 @@ main {
 }
 
 /* -- NEW PRODUCT -- */
-/* COMMON BOX STYLE */
-/* TEXT BOX */
+
+/* -- COMMON BOX STYLE -- */
+.box-title-style {
+  padding: 20px 0;
+  font-size: 26px;
+  font-weight: 800;
+  color: #6e6e73;
+}
+.box-shape {
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+  position: relative;
+}
+.box-shape:hover {
+  transform: scale(1.01);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.14);
+}
+.box-scale-1,
+.box-scale-1 .full-img {
+  width: 313px;
+  height: 500px;
+}
+.box-scale-2,
+.box-scale-2 .full-img {
+  width: 400px;
+  height: 500px;
+}
+.box-scale-3,
+.box-scale-3 .full-img {
+  width: 480px;
+  height: 500px;
+}
+.box-scale-1,
+.box-scale-2,
+.box-scale-3 {
+  position: relative;
+}
+.box-scale-1 .full-img,
+.box-scale-2 .full-img,
+.box-scale-3 .full-img {
+  position: absolute;
+}
+/* -- COMMON TEXT BOX -- */
+.text-box {
+  position: absolute;
+  padding: 30px;
+}
+.text-box__title {
+  font-size: 12px;
+}
+.text-box__content {
+  font-size: 28px;
+  font-weight: 600;
+  padding: 8px 0;
+  word-break: keep-all;
+}
+.text-box__content-sub {
+  font-size: 16px;
+}
 
 /* -- HELP SECTION -- */
 
@@ -410,6 +405,7 @@ main {
 .main__only-apple .box-shape .box-text span.color-green {
   color: #68cc45;
 }
+
 /* -- ACCESSORIES -- */
 /* -- AirPODs -- */
 .box-scale-2 .box__info {
@@ -566,8 +562,11 @@ footer .footer__all-memu .all-memu__container ul li ul {
   width: 1px;
   height: 12px;
   background-color: #d2d2d7;
-  display: block;
+  /* display: block; */
   position: absolute;
+}
+.footer__notice .notice__etc .rules-info li:first-child::before {
+  display: none;
 }
 .footer__notice .notice__etc .rules-info li a {
   padding: 0 6px;
