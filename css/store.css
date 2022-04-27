@@ -357,8 +357,6 @@ main {
   box-sizing: border-box;
   background-color: #fff;
 }
-.main__only-apple .box-shape .box__inner {
-}
 .main__only-apple .box-shape .svg-section svg {
   width: 36px;
 }
@@ -399,6 +397,7 @@ main {
 .main__only-apple .box-shape .box-text span.color-rainbow {
   background-image: linear-gradient(to right,#ffa600, #a96ba4, #77a8c7, #82e8a0);
   color: transparent;
+  background-clip: text;
   -webkit-background-clip: text;
 }
 .main__only-apple .box-shape .box-text span.color-violet {
