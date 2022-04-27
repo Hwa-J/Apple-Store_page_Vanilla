@@ -1,9 +1,9 @@
 # Apple Store Page Clone Coding
 
-[원본 페이지 링크](https://www.apple.com/kr/store)
+[원본 페이지 링크](https://www.apple.com/kr/store) (https://www.apple.com/kr/store)
 
 
-[클론 페이지 링크](https://stalwart-maamoul-b998eb.netlify.app)
+[클론 페이지 링크](https://stalwart-maamoul-b998eb.netlify.app) (https://stalwart-maamoul-b998eb.netlify.app)
 
 ---
 <br/>
@@ -18,15 +18,83 @@
 To. 코드 리뷰어님  
 상품 페이지라 반복 내용이 많아서 줄이 긴 것이니 어지럽더라도 양해 부탁드립니다.😢
 
+---
 <br/>
 
-## 느낀점 🤔
+## 느낀 점 🤔
 
 페이지를 만들기 전 전체적인 레이아웃을 잘 살펴보는 것이 중요하다고 느꼈습니다.  
 공통적으로 생긴 레이아웃에 대해 안일하게 생각하고 header, main, footer로 나누어 그 구역 기준만 생각하고 완성해 보니 반복되고 지저분한 CSS가 눈에 띄었습니다.  
 반복되고 지저분해 보이는 부분을 정리하는데 많은 시간과 번거로움이 있었습니다.  
 이런 경험으로, 반복되는 레이아웃이 있으면 같은 모양의 레이아웃을 어떻게 공통적으로 관리할 수 있을지 생각해보고, 공통 레이아웃에 적용하고 관리할 class명과 css적용 코드를 잘 적용해야 한다는 점을 느꼈습니다.  
 
+---
+<br/>
+
+## 알게된 점 🤓
+
+### a 태그
+- 부모 요소에 z-index가 적용된 경우 a태그가 비활성화 된다.
+- a태그를 hover했을 떄 일부분 밑줄 제외하는 법
+
+  ```html
+  <a href="javascript:void(0)" target="_blank">
+    <div class="arrow-wrap">
+            더 알아보기
+        <div>
+  <!-- 화살표를 hover해도 밑줄을 나타내지 않기 위해 div로 한번 더 랩핑  -->
+          <span class="material-icons">
+           navigate_next 
+          </span>
+        </div>
+    </div>
+  </a>
+  ```
+  ```css
+  .a-hov-under-line a:hover {
+  text-decoration: underline;
+  }
+  /* hover해도 밑줄을 나타내지 않기 위해 inline-block 설정 */
+  .arrow-wrap .material-icons {
+  display: inline-block;
+  }
+  ```
+<br/>
+
+### swiper
+- 기본 제공되는 swiper 버튼을 없애고 싶을때
+  ```css
+  .swiper-button-next::after,
+  .swiper-button-prev::after {
+  display: none;
+  }
+  ```
+- 비활성화 시 붙는 `.swiper-button-disabled` class명이 있어, css로 수정이 가능하다.
+  ```css
+  .swiper-button-disabled {
+  display: none;
+  }
+  ```
+<br/>
+
+### 색상 바꾸기
+- svg의 색상은 `fill`속성으로 변경할 수 있다.
+  ```css
+  svg.color-fog-blue {
+  fill : #3f6eb8;
+  }
+  ```
+- `-webkit-background-clip` 속성을 이용하면 글자색과 배경색이 뒤바뀐다(맞교환).
+  [(mdn 참고)](https://developer.mozilla.org/ko/docs/Web/CSS/background-clip)
+  ```css
+  .color-rainbow  {
+  background-image: linear-gradient(to right,#ffa600, #a96ba4, #77a8c7, #82e8a0);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  }
+  ```
+---
 <br/>
 
 ## 보충할 점 👀
