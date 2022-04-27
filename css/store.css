@@ -129,6 +129,11 @@ header .header__main-menu li a:hover {
   animation-name: slide-in, color-stay, color-change;
   animation-delay: 0s, 1s, 2s;
   animation-duration: 1s, 1s, 1.5s;
+}
+.banner.hidden {
+  display: none;
+}
+.banner.to-top {
   position: relative;
   z-index: -1;
 }
@@ -140,9 +145,6 @@ header .header__main-menu li a:hover {
 }
 .banner .inner a {
   padding: 0 5px;
-}
-.hidden {
-  display: none;
 }
 @keyframes slide-in {
   0% {
